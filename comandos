@@ -1,0 +1,9 @@
+Iniciar
+tsc --init
+tsc --watch
+
+Compilar (Caso watch não resolva) 
+tsc nome.ts
+
+executar
+node nome.js
