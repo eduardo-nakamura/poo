@@ -1,5 +1,4 @@
 Iniciar
-tsc --init
 tsc --watch
 
 Compilar (Caso watch não resolva) 

@@ -1,7 +1,7 @@
 export default class Animal {
-  tipo: string;
-  nome: string;
-  idade: number;
+  private tipo: string;
+  private nome: string;
+  private idade: number;
 
   constructor(t: string, n:string, i: number){
     this.tipo = t
@@ -9,7 +9,7 @@ export default class Animal {
     this.idade = i
   }
 
-  public comunicar(): void{
+  protected comunicar(): void{
     console.log("Ola")
   }
 }
@@ -21,8 +21,8 @@ class Cachorro extends Animal {
     this.raça = r
   }
 
-  public comunicar(): void{
-    console.log("Au Au")
+  public latir(): void{
+    super.comunicar()
   }
 }
 
@@ -41,4 +41,4 @@ class Gente extends Animal {
 let c1 = new Cachorro("cachorro", "box", 2, "poodle")
 let p1 = new Gente("Humano", "Takeshi", 25, "Asiatico")
 
-console.log(c1.comunicar(),p1.comunicar())
+console.log(c1.latir(),p1.comunicar())

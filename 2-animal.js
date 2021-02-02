@@ -32,8 +32,8 @@ var Cachorro = /** @class */ (function (_super) {
         _this.raça = r;
         return _this;
     }
-    Cachorro.prototype.comunicar = function () {
-        console.log("Au Au");
+    Cachorro.prototype.latir = function () {
+        _super.prototype.comunicar.call(this);
     };
     return Cachorro;
 }(Animal));
@@ -51,4 +51,4 @@ var Gente = /** @class */ (function (_super) {
 }(Animal));
 var c1 = new Cachorro("cachorro", "box", 2, "poodle");
 var p1 = new Gente("Humano", "Takeshi", 25, "Asiatico");
-console.log(c1.comunicar(), p1.comunicar());
+console.log(c1.latir(), p1.comunicar());
